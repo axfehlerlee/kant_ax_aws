@@ -1,7 +1,24 @@
-# AI Exam Coach Mini MSA
+# AWS 스터디 과제 모음
 
-FastAPI와 Docker를 이용하여 구현한 간단한 MSA 기반 문제 풀이·채점 백엔드입니다.
-이 저장소는 AI Exam Coach 아이디어를 작은 백엔드로 구현한 수업 실습입니다. 문제 조회와 객관식 답안 채점을 두 서비스로 분리하며, 전체 Exam Coach 제품이나 해커톤 개발 원본과는 별도입니다.
+AWS 스터디에서 수행한 과제와 실행·검증 기록을 누적하는 저장소입니다. 현재 수록된 AI Exam Coach Mini MSA는 그중 한 과제입니다. 새 과제를 추가하면 이 목차와 해당 과제의 실행법·학습 결과를 함께 갱신합니다.
+
+## 학습 목표
+
+- AWS 스터디의 과제별 학습 내용과 검증 근거를 계속 정리합니다.
+- 작은 서비스를 구현하며 API, 컨테이너, 서비스 간 통신과 장애 대응을 익힙니다.
+- 각 과제의 실행 조건과 결과를 남겨 다시 실행하고 비교할 수 있게 합니다.
+
+## 과제 목차
+
+| 과제 | 주요 학습 내용 | 현재 위치·실행 안내 | 기록 |
+|---|---|---|---|
+| AI Exam Coach Mini MSA | FastAPI, Docker Compose, HTTPX, 문제 조회·답안 채점, 서비스 간 HTTP 통신 | 루트 [compose.yaml](compose.yaml), [question-service](question-service/), [attempt-service](attempt-service/), [실행법](#run) | [DEV_LOG.md](DEV_LOG.md), [검증 화면](docs/01_msa_attempt_success_201.png) |
+
+현재 코드와 Compose 파일은 루트 및 위 서비스 폴더에 있습니다. 앞으로 과제가 쌓이면 과제별 하위 폴더 분리를 검토하되, 이번 문서 정리에서는 파일 위치를 바꾸지 않았습니다.
+
+## 현재 과제: AI Exam Coach Mini MSA
+
+FastAPI와 Docker를 이용하여 구현한 간단한 MSA 기반 문제 풀이·채점 백엔드입니다. 문제 조회와 객관식 답안 채점을 두 서비스로 분리하는 수업 실습으로, 전체 Exam Coach 제품이나 해커톤 개발 원본과는 별도입니다.
 
 ## Architecture
 
