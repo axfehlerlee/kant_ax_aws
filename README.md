@@ -1,6 +1,8 @@
 # AI Exam Coach Mini MSA
 
 FastAPI와 Docker를 이용하여 구현한 간단한 MSA 기반 문제 풀이·채점 백엔드입니다.
+이 저장소는 AI Exam Coach 아이디어를 작은 백엔드로 구현한 수업 실습입니다. 문제 조회와 객관식 답안 채점을 두 서비스로 분리하며, 전체 Exam Coach 제품이나 해커톤 개발 원본과는 별도입니다.
+
 ## Architecture
 
 사용자
@@ -59,3 +61,8 @@ docker compose up -d --build
 Attempt Service가 Question Service를 HTTP로 호출하여 정답을 확인하고, 채점 결과를 정상적으로 반환했습니다.
 
 ![MSA Attempt Success](docs/01_msa_attempt_success_201.png)
+
+
+## 개발·검증 기록
+
+[DEV_LOG.md](./DEV_LOG.md)에 2026-09-25의 구현·검증·디버깅 과정을 보존했습니다. 당시 `POST /attempts`의 HTTP 201 및 `is_correct: true`, Question Service 중지 시 HTTP 503, Compose 내부 서비스 DNS와 이미지 재빌드 확인을 기록했습니다. 위 설명은 기존 검증 기록의 요약이며 이번 문서 정리에서 컨테이너를 다시 실행했다는 의미는 아닙니다.
